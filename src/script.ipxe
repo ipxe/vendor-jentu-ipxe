@@ -1,0 +1,6 @@
+#!ipxe
+:retry
+ifclose net0
+dhcp || goto retry
+chain http://192.168.0.4/boot.php?mac=${net0/mac:hexhyp}&ip=${net0/ip} || chain http://192.168.0.4/boot.php?mac=${net0/mac:hexhyp}&ip=${net0/ip} || goto retry
+exit

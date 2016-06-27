@@ -291,7 +291,7 @@ int ifconf ( struct net_device *netdev,
 	}
 
 	/* Wait for configuration to complete */
-	printf ( "Configuring %s%s%s(%s %s)",
+	printf ( "Configuring JentuPXE %s%s%s(%s %s)",
 		 ( configurator ? "[" : "" ),
 		 ( configurator ? configurator->name : "" ),
 		 ( configurator ? "] " : "" ),

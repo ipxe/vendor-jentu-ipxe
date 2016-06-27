@@ -421,6 +421,7 @@ static int echo_exec ( int argc, char **argv ) {
 		return -ENOMEM;
 
 	/* Print text */
+	/* Print the Error Code ex 0x10 Menu Fetch Error */
 	printf ( "%s%s", text, ( opts.no_newline ? "" : "\n" ) );
 
 	free ( text );
